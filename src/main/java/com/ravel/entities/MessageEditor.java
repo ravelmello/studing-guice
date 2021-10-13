@@ -1,9 +1,8 @@
 package com.ravel.entities;
 
 import com.google.inject.Inject;
-import com.google.inject.spi.Message;
 import com.ravel.interfaces.MessageChecker;
-import com.ravel.interfaces.MessageCheckerImp;
+import com.ravel.interfaces.WinWord;
 
 import java.util.logging.Logger;
 
@@ -15,7 +14,7 @@ public class MessageEditor {
     private MessageChecker messageChecker;
 
     @Inject
-    public MessageEditor(MessageChecker messageChecker){
+    public MessageEditor(@WinWord MessageChecker messageChecker){
         this.messageChecker = messageChecker;
     }
 
