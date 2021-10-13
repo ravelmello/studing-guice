@@ -1,21 +1,18 @@
 package com.ravel.interfaces;
 
-import com.google.inject.Inject;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class MessageCheckerImp implements MessageChecker{
 
-    @Inject
-    private Logger logger;
+    private static final Logger LOGGER = Logger.getLogger(MessageCheckerImp.class.getCanonicalName());
 
     @Override
     public void checkMessage(String message) {
          if(!message.isEmpty()) {
-             logger.log(Level.INFO, () -> "Inside the check, I receive this message " + message);
+             LOGGER.log(Level.INFO, () -> "Inside the check, I receive this message " + message);
          } else {
-             logger.log(Level.SEVERE, ()-> "Empty Message at Class -> " + getClass().getCanonicalName());
+             LOGGER.log(Level.SEVERE, ()-> "Empty Message at Class -> " + getClass().getCanonicalName());
          }
 
     }
