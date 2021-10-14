@@ -23,7 +23,7 @@ public class Connection {
     public void makeConnection(){
      LOGGER.log(Level.INFO, "Connection -> {0}", dbUrl);
      LOGGER.log(Level.INFO, "User -> {0}", user);
-     LOGGER.log(Level.INFO, "timeOut in {0} -> ", timeOut);
+     LOGGER.log(Level.INFO, "timeOut in -> {0}  ", timeOut);
     }
 
     public String getUser() {
